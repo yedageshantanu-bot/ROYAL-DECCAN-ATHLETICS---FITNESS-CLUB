@@ -264,7 +264,7 @@ function Navbar() {
                   </motion.a>
                 ))}
               </div>
-              <MagneticButton href="#contact" className="mt-7 w-full justify-center">
+              <MagneticButton href={academy.whatsapp} className="mt-7 w-full justify-center">
                 Join Now <ArrowRight className="h-4 w-4" />
               </MagneticButton>
             </motion.aside>
@@ -319,7 +319,7 @@ function Hero() {
             outdoor ground work and real physical progress.
           </motion.p>
           <motion.div variants={reveal} className="mt-7 flex gap-3">
-            <MagneticButton href="#contact" className="flex-1 px-4 text-xs sm:flex-none sm:px-6 sm:text-sm">
+            <MagneticButton href={academy.whatsapp} className="flex-1 px-4 text-xs sm:flex-none sm:px-6 sm:text-sm">
               Join Now <ArrowRight className="h-5 w-5" />
             </MagneticButton>
             <MagneticButton href="#gallery" variant="ghost" className="flex-1 px-4 text-xs sm:flex-none sm:px-6 sm:text-sm">
@@ -794,6 +794,20 @@ function Fees() {
                     </li>
                   ))}
                 </ul>
+                <a
+                  href={academy.whatsapp}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={clsx(
+                    "mt-6 inline-flex w-full items-center justify-center gap-2 rounded-2xl px-4 py-3 text-sm font-black uppercase tracking-[0.12em] transition",
+                    index === 1
+                      ? "bg-ink text-white hover:bg-ink/85"
+                      : "bg-gold text-ink hover:shadow-gold"
+                  )}
+                >
+                  Join Now
+                  <ArrowRight className="h-4 w-4" />
+                </a>
               </motion.article>
             </Reveal>
           ))}
@@ -1005,7 +1019,12 @@ function FloatingActions() {
                 <Phone className="h-4 w-4" />
                 Call
               </a>
-              <a href="#contact" className="flex items-center justify-center gap-2 rounded-2xl bg-royal py-3 text-sm font-black text-white">
+              <a
+                href={academy.whatsapp}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center justify-center gap-2 rounded-2xl bg-royal py-3 text-sm font-black text-white"
+              >
                 Join Now
                 <ArrowRight className="h-4 w-4" />
               </a>
